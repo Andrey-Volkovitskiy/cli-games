@@ -2,7 +2,7 @@ from random import randint, choice
 
 
 def calc_generator():
-    result = list()
+    q_a_list = list()
     num_of_game_rounds = 3
     while num_of_game_rounds > 0:
         first_number = randint(1, 10)
@@ -21,7 +21,7 @@ def calc_generator():
             question = f'{first_number} * {second_number}'
             correct_answer = first_number * second_number
 
-        result.append((question, str(correct_answer)))
+        q_a_list.append((question, str(correct_answer)))
         num_of_game_rounds -= 1
 
-    return result
+    return q_a_list

@@ -15,7 +15,7 @@ def get_question(progression, correct_answer):
 
 
 def progression_generator():
-    result = list()
+    q_a_list = list()
     num_of_game_rounds = 3
     progression_len = 10
     while num_of_game_rounds > 0:
@@ -26,7 +26,7 @@ def progression_generator():
 
         correct_answer = choice(progression[2:-2])
         question = (get_question(progression, correct_answer))
-        result.append((question, str(correct_answer)))
+        q_a_list.append((question, str(correct_answer)))
         num_of_game_rounds -= 1
 
-    return result
+    return q_a_list

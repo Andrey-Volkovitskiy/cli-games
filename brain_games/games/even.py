@@ -2,7 +2,7 @@ from random import randint
 
 
 def even_generator():
-    result = list()
+    q_a_list = list()
     num_of_game_rounds = 3
     while num_of_game_rounds > 0:
         the_number = randint(1, 99)
@@ -13,7 +13,7 @@ def even_generator():
         else:
             correct_answer = 'no'
 
-        result.append((question, correct_answer))
+        q_a_list.append((question, correct_answer))
         num_of_game_rounds -= 1
 
-    return result
+    return q_a_list
