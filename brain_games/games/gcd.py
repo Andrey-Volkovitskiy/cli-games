@@ -3,7 +3,7 @@ from math import gcd
 from brain_games import NUM_OF_GAME_ROUNDS
 
 
-def gcd_generator():
+def generate_gcd():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:

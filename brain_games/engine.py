@@ -1,7 +1,7 @@
 import prompt
 
 
-def game_engine(user_name, questions_and_answers):
+def play_game(user_name, questions_and_answers):
     num_of_game_rounds = len(questions_and_answers)
     for i in range(num_of_game_rounds):
         (question, correct_answer) = questions_and_answers[i]

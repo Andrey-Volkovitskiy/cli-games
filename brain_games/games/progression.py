@@ -15,15 +15,15 @@ def get_question(progression, correct_answer):
     return question.replace(str(correct_answer), "..", 1)
 
 
-def progression_generator():
+def generate_progression():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
-    progression_len = 10
+    PROGRESSION_LEN = 10
     while rounds_left > 0:
         progression_start = randint(0, 20)
         progression_step = randint(1, 5)
         progression = get_progression(progression_start, progression_step,
-                                      progression_len)
+                                      PROGRESSION_LEN)
 
         correct_answer = choice(progression[2:-2])
         question = (get_question(progression, correct_answer))

@@ -11,7 +11,7 @@ def is_prime(the_number):
     return result
 
 
-def prime_generator():
+def generate_prime():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:

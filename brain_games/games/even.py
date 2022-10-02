@@ -2,7 +2,7 @@ from random import randint
 from brain_games import NUM_OF_GAME_ROUNDS
 
 
-def even_generator():
+def generate_even():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
