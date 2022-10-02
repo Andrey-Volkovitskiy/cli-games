@@ -1,4 +1,5 @@
 from random import randint
+from brain_games import NUM_OF_GAME_ROUNDS
 
 
 def is_prime(the_number):
@@ -12,12 +13,12 @@ def is_prime(the_number):
 
 def prime_generator():
     q_a_list = list()
-    num_of_game_rounds = 3
-    while num_of_game_rounds > 0:
+    rounds_left = NUM_OF_GAME_ROUNDS
+    while rounds_left > 0:
         the_number = randint(2, 99)
         correct_answer = is_prime(the_number)
         question = str(the_number)
         q_a_list.append((question, correct_answer))
-        num_of_game_rounds -= 1
+        rounds_left -= 1
 
     return q_a_list

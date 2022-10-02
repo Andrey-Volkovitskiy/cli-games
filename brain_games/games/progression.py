@@ -1,4 +1,5 @@
 from random import randint, choice
+from brain_games import NUM_OF_GAME_ROUNDS
 
 
 def get_progression(progression_start, progression_step, progression_len):
@@ -16,9 +17,9 @@ def get_question(progression, correct_answer):
 
 def progression_generator():
     q_a_list = list()
-    num_of_game_rounds = 3
+    rounds_left = NUM_OF_GAME_ROUNDS
     progression_len = 10
-    while num_of_game_rounds > 0:
+    while rounds_left > 0:
         progression_start = randint(0, 20)
         progression_step = randint(1, 5)
         progression = get_progression(progression_start, progression_step,
@@ -27,6 +28,6 @@ def progression_generator():
         correct_answer = choice(progression[2:-2])
         question = (get_question(progression, correct_answer))
         q_a_list.append((question, str(correct_answer)))
-        num_of_game_rounds -= 1
+        rounds_left -= 1
 
     return q_a_list

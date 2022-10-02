@@ -1,27 +1,28 @@
 from random import randint, choice
+from brain_games import NUM_OF_GAME_ROUNDS
 
 
 def calc_generator():
     q_a_list = list()
-    num_of_game_rounds = 3
-    while num_of_game_rounds > 0:
+    rounds_left = NUM_OF_GAME_ROUNDS
+    while rounds_left > 0:
         first_number = randint(1, 10)
         second_number = randint(1, 10)
         math_operation = choice(['+', '-', '*'])
-        
+
         if math_operation == '+':
             question = f'{first_number} + {second_number}'
             correct_answer = first_number + second_number
-        
-        if math_operation == '-':
+
+        elif math_operation == '-':
             question = f'{first_number} - {second_number}'
             correct_answer = first_number - second_number
 
-        if math_operation == '*':
+        elif math_operation == '*':
             question = f'{first_number} * {second_number}'
             correct_answer = first_number * second_number
 
         q_a_list.append((question, str(correct_answer)))
-        num_of_game_rounds -= 1
+        rounds_left -= 1
 
     return q_a_list
