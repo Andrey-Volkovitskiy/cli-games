@@ -26,4 +26,3 @@ def generate_calc():
         rounds_left -= 1
 
     return q_a_list
-    
