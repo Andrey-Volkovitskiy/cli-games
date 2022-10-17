@@ -6,10 +6,10 @@ def generate_even():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
-        the_number = randint(1, 99)
-        question = str(the_number)
+        number = randint(1, 99)
+        question = str(number)
 
-        if the_number % 2 == 0:
+        if number % 2 == 0:
             correct_answer = 'yes'
         else:
             correct_answer = 'no'

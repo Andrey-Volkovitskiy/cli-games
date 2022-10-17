@@ -3,9 +3,10 @@ from brain_games.greet import greet_user
 from brain_games.engine import play_game
 from brain_games.games.gcd import generate_gcd
 
+GAME_NAME = "Find the greatest common divisor of given numbers."
+
 
 def main():
-    GAME_NAME = "Find the greatest common divisor of given numbers."
     user_name = greet_user(GAME_NAME)
     questions_and_answers = generate_gcd()
     play_game(user_name, questions_and_answers)

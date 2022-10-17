@@ -3,9 +3,10 @@ from brain_games.greet import greet_user
 from brain_games.engine import play_game
 from brain_games.games.prime import generate_prime
 
+GAME_NAME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
+
 
 def main():
-    GAME_NAME = 'Answer "yes" if given number is prime. Otherwise answer "no".'
     user_name = greet_user(GAME_NAME)
     questions_and_answers = generate_prime()
     play_game(user_name, questions_and_answers)
