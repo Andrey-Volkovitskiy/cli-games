@@ -3,3 +3,4 @@
 __pycache__/
 scripts/__pycache__
 games/__pycache__
+dist/
