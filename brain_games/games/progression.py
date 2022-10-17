@@ -21,13 +21,9 @@ def get_question(progression, correct_answer):
 
 
 def generate_progression():
-    '''Generates the collecion of questions and answers for
-    Brain Progression game.
+    '''Generates list of tuples with questions and correct answers
+    for Brain Progression game.'''
 
-    Returns:
-        The list of tuples with questions and correct answers.
-
-    '''
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:

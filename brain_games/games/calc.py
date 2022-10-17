@@ -1,5 +1,12 @@
 from random import randint, choice
 from brain_games import NUM_OF_GAME_ROUNDS
+import operator
+
+OPERATORS = {
+    '+': operator.add,
+    '-': operator.sub,
+    '*': operator.mul
+}
 
 
 def generate_calc():
@@ -11,19 +18,10 @@ def generate_calc():
     while rounds_left > 0:
         first_number = randint(1, 10)
         second_number = randint(1, 10)
-        math_operation = choice(['+', '-', '*'])
+        math_operation = choice(list(OPERATORS.keys()))
 
-        if math_operation == '+':
-            question = f'{first_number} + {second_number}'
-            correct_answer = first_number + second_number
-
-        elif math_operation == '-':
-            question = f'{first_number} - {second_number}'
-            correct_answer = first_number - second_number
-
-        elif math_operation == '*':
-            question = f'{first_number} * {second_number}'
-            correct_answer = first_number * second_number
+        question = f'{first_number} {math_operation} {second_number}'
+        correct_answer = OPERATORS[math_operation](first_number, second_number)
 
         q_a_list.append((question, str(correct_answer)))
         rounds_left -= 1
