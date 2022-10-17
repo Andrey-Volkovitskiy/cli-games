@@ -3,6 +3,9 @@ from brain_games import NUM_OF_GAME_ROUNDS
 
 
 def is_prime(number):
+    '''Returns "yes" if the number is prime
+    and "no" if the number is't prime.'''
+
     result = 'yes'
     for i in range(2, number // 2):
         if number % i == 0:
@@ -12,6 +15,9 @@ def is_prime(number):
 
 
 def generate_prime():
+    '''Generates list of tuples with questions and correct answers
+    for Brain Prime game.'''
+
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
