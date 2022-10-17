@@ -13,9 +13,17 @@ It consists of a set of six simple games:
 
 ---
 ### Hexlet tests and linter status:
-[![Actions Status](https://github.com/Andrey-Volkovitskiy/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Andrey-Volkovitskiy/python-project-49/actions)
+[![Actions Status](https://github.com/Andrey-Volkovitskiy/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Andrey-Volkovitskiy/python-project-49/actions) <a href="https://codeclimate.com/github/Andrey-Volkovitskiy/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/b9dac5515a4f57ed4447/maintainability" /></a>
 
-<a href="https://codeclimate.com/github/Andrey-Volkovitskiy/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/b9dac5515a4f57ed4447/maintainability" /></a>
+
+This project was built using these tools:
+
+| Tool                                                                        | Description                                             |
+|-----------------------------------------------------------------------------|---------------------------------------------------------|
+| [poetry](https://poetry.eustace.io/)                                        | "Python dependency management and packaging made easy"  |
+| [flake8](https://flake8.pycqa.org/)               | "Check the style and quality of python code" |
+| [code climate](https://codeclimate.com/)               | "Enforce code quality standards on every commit" |
+
 
 
 ---
