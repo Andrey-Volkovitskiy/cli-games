@@ -1,6 +1,9 @@
 from random import randint
 from brain_games import NUM_OF_GAME_ROUNDS
 
+MIN_NUMBER = 2
+MAX_NUMBER = 99
+
 
 def is_prime(number):
     '''Returns "yes" if the number is prime
@@ -21,7 +24,7 @@ def generate_prime():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
-        number = randint(2, 99)
+        number = randint(MIN_NUMBER, MAX_NUMBER)
         correct_answer = is_prime(number)
         question = str(number)
         q_a_list.append((question, correct_answer))

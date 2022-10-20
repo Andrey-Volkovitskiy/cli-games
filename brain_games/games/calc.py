@@ -8,6 +8,9 @@ OPERATORS = {
     '*': operator.mul
 }
 
+MIN_NUMBER = 1
+MAX_NUMBER = 10
+
 
 def generate_calc():
     '''Generates list of tuples with questions and correct answers
@@ -16,8 +19,8 @@ def generate_calc():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
-        first_number = randint(1, 10)
-        second_number = randint(1, 10)
+        first_number = randint(MIN_NUMBER, MAX_NUMBER)
+        second_number = randint(MIN_NUMBER, MAX_NUMBER)
         math_operation = choice(list(OPERATORS.keys()))
 
         question = f'{first_number} {math_operation} {second_number}'

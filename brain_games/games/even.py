@@ -1,6 +1,9 @@
 from random import randint
 from brain_games import NUM_OF_GAME_ROUNDS
 
+MIN_NUMBER = 1
+MAX_NUMBER = 99
+
 
 def generate_even():
     '''Generates list of tuples with questions and correct answers
@@ -9,7 +12,7 @@ def generate_even():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
-        number = randint(1, 99)
+        number = randint(MIN_NUMBER, MAX_NUMBER)
         question = str(number)
 
         if number % 2 == 0:

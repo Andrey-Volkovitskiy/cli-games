@@ -2,6 +2,10 @@ from random import randint, choice
 from brain_games import NUM_OF_GAME_ROUNDS
 
 PROGRESSION_LEN = 10
+PROGRESSION_STARTS_FROM_MIN = 0
+PROGRESSION_STARTS_FROM_MAX = 20
+PROGRESSION_STEP_MIN = 1
+PROGRESSION_STEP_MAX = 5
 
 
 def get_progression(progression_start, progression_step, progression_len):
@@ -27,9 +31,12 @@ def generate_progression():
     q_a_list = list()
     rounds_left = NUM_OF_GAME_ROUNDS
     while rounds_left > 0:
-        progression_start = randint(0, 20)
-        progression_step = randint(1, 5)
-        progression = get_progression(progression_start, progression_step,
+        progression_start = randint(PROGRESSION_STARTS_FROM_MIN,
+                                    PROGRESSION_STARTS_FROM_MAX)
+        progression_step = randint(PROGRESSION_STEP_MIN,
+                                   PROGRESSION_STEP_MAX)
+        progression = get_progression(progression_start,
+                                      progression_step,
                                       PROGRESSION_LEN)
 
         correct_answer = choice(progression[2:-2])
