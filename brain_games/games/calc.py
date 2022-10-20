@@ -1,23 +1,22 @@
 from random import randint, choice
-from brain_games import NUM_OF_GAME_ROUNDS
 import operator
 
+TASK = "What is the result of the expression?"
 OPERATORS = {
     '+': operator.add,
     '-': operator.sub,
     '*': operator.mul
 }
-
 MIN_NUMBER = 1
 MAX_NUMBER = 10
 
 
-def generate_calc():
+def generate(num_of_game_rounds):
     '''Generates list of tuples with questions and correct answers
     for Brain Calc game.'''
 
     q_a_list = list()
-    rounds_left = NUM_OF_GAME_ROUNDS
+    rounds_left = num_of_game_rounds
     while rounds_left > 0:
         first_number = randint(MIN_NUMBER, MAX_NUMBER)
         second_number = randint(MIN_NUMBER, MAX_NUMBER)

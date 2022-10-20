@@ -1,12 +1,9 @@
 #!/usr/bin/env python3
-from brain_games.scripts import start
-from brain_games.games.progression import generate_progression
-
-GAME_NAME = "What number is missing in the progression?"
+from brain_games.engine import start
 
 
 def main():
-    start(GAME_NAME, generate_progression)
+    start('progression')
 
 
 if __name__ == '__main__':

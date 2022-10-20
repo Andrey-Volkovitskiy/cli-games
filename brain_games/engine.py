@@ -1,4 +1,25 @@
 import prompt
+import importlib
+
+NUM_OF_GAME_ROUNDS = 3
+
+
+def greet_user(task):
+    '''Greet a user and print current game task
+
+    Arguments:
+        task - current game invitation
+
+    Returns:
+        user_name, requested from the user
+
+    '''
+    print("Welcome to the Brain Games!")
+    user_name = prompt.string('May I have your name? ')
+    print(f'Hello, {user_name}!')
+    if task is not None:
+        print(task)
+    return user_name
 
 
 def play_game(user_name, questions_and_answers):
@@ -11,10 +32,8 @@ def play_game(user_name, questions_and_answers):
 
     Returns:
         None
-
     '''
-    num_of_game_rounds = len(questions_and_answers)
-    for i in range(num_of_game_rounds):
+    for i in range(NUM_OF_GAME_ROUNDS):
         (question, correct_answer) = questions_and_answers[i]
         print(f'Question: {question}')
         user_answer = prompt.string('Your answer: ')
@@ -25,5 +44,21 @@ def play_game(user_name, questions_and_answers):
                   f"Correct answer was '{correct_answer}'.")
             print(f"Let's try again, {user_name}!")
             return None
-
     print(f'Congratulations, {user_name}!')
+
+
+def start(game_name):
+    '''Stars all games
+
+    Arguments:
+        game_name - the name of the game to run
+
+    Returns:
+        None
+    '''
+    game_path = "brain_games.games." + game_name
+    game = importlib.import_module(game_path)
+
+    user_name = greet_user(game.TASK)
+    questions_and_answers = game.generate(NUM_OF_GAME_ROUNDS)
+    play_game(user_name, questions_and_answers)

@@ -1,6 +1,6 @@
 from random import randint, choice
-from brain_games import NUM_OF_GAME_ROUNDS
 
+TASK = 'What number is missing in the progression?'
 PROGRESSION_LEN = 10
 PROGRESSION_STARTS_FROM_MIN = 0
 PROGRESSION_STARTS_FROM_MAX = 20
@@ -24,12 +24,12 @@ def get_question(progression, correct_answer):
     return question.replace(str(correct_answer), "..", 1)
 
 
-def generate_progression():
+def generate(num_of_game_rounds):
     '''Generates list of tuples with questions and correct answers
     for Brain Progression game.'''
 
     q_a_list = list()
-    rounds_left = NUM_OF_GAME_ROUNDS
+    rounds_left = num_of_game_rounds
     while rounds_left > 0:
         progression_start = randint(PROGRESSION_STARTS_FROM_MIN,
                                     PROGRESSION_STARTS_FROM_MAX)

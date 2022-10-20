@@ -1,16 +1,16 @@
 from random import randint
-from brain_games import NUM_OF_GAME_ROUNDS
 
+TASK = 'Answer "yes" if the number is even, otherwise answer "no".'
 MIN_NUMBER = 1
 MAX_NUMBER = 99
 
 
-def generate_even():
+def generate(num_of_game_rounds):
     '''Generates list of tuples with questions and correct answers
     for Brain Even game.'''
 
     q_a_list = list()
-    rounds_left = NUM_OF_GAME_ROUNDS
+    rounds_left = num_of_game_rounds
     while rounds_left > 0:
         number = randint(MIN_NUMBER, MAX_NUMBER)
         question = str(number)
