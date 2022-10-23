@@ -1,5 +1,4 @@
 import prompt
-import importlib
 
 NUM_OF_GAME_ROUNDS = 3
 
@@ -47,7 +46,7 @@ def play_game(user_name, questions_and_answers):
     print(f'Congratulations, {user_name}!')
 
 
-def start(game_name):
+def start(game):
     '''Stars all games
 
     Arguments:
@@ -56,9 +55,6 @@ def start(game_name):
     Returns:
         None
     '''
-    game_path = "brain_games.games." + game_name
-    game = importlib.import_module(game_path)
-
     user_name = greet_user(game.TASK)
     questions_and_answers = game.generate(NUM_OF_GAME_ROUNDS)
     play_game(user_name, questions_and_answers)
