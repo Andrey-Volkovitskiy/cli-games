@@ -47,10 +47,10 @@ def play_game(user_name, questions_and_answers):
 
 
 def start(game):
-    '''Stars all games
+    '''Starts all games
 
     Arguments:
-        game_name - the name of the game to run
+        game - the link to the game to run
 
     Returns:
         None
