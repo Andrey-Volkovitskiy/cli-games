@@ -3,7 +3,7 @@
 
 **This is the 1st training project of "Python Developer" course.**
 
-App consists of a set of six CLI games:
+App consists of six CLI games:
 - Brain-games: user greeting
 - Brain-even: try to guess if the number is even or odd
 - Brain-calc: try to calculate a simple math expression (a + b = ?)
