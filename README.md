@@ -1,9 +1,9 @@
 
 # Brain Games
 
-**This is the 1st training project of the Hexlet "Python Developer" course.**
+**This is the 1st training project of "Python Developer" course.**
 
-It consists of a set of six simple games:
+App consists of a set of six CLI games:
 - Brain-games: user greeting
 - Brain-even: try to guess if the number is even or odd
 - Brain-calc: try to calculate a simple math expression (a + b = ?)
@@ -12,7 +12,7 @@ It consists of a set of six simple games:
 - Brain-prime: try to guess if the number is prime or not
 
 ---
-### Hexlet tests and linter status:
+### Tests and code quality assessment:
 [![Actions Status](https://github.com/Andrey-Volkovitskiy/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Andrey-Volkovitskiy/python-project-49/actions) <a href="https://codeclimate.com/github/Andrey-Volkovitskiy/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/b9dac5515a4f57ed4447/maintainability" /></a>
 
 
