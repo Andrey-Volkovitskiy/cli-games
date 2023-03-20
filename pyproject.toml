@@ -1,13 +1,12 @@
 [tool.poetry]
 name = "hexlet-code"
 version = "0.1.0"
-description = "The first pet project of Hexlet 'Python developer' course."
+description = "App consists of six CLI games."
 authors = ["Andrey <volk000@gmail.com>"]
 readme = "README.md"
 packages = [{include = "brain_games"}]
 repository = "https://github.com/Andrey-Volkovitskiy/python-project-49"
 classifiers = [
-    "Private :: Do Not Upload",
     "Programming Language :: Python :: 3.8",
     "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Education",
