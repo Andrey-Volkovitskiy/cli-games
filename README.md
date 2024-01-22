@@ -1,8 +1,11 @@
 
 # Brain Games
 
-**This is the 1st training project of "Python Developer" course.**
+**This is the 1st training project of "Python Developer" specialization.**
 
+- Practiced user input processing
+- Practiced following DRY and clean code principles
+---
 App consists of six CLI games:
 - Brain-games: user greeting
 - Brain-even: try to guess if the number is even or odd
@@ -10,7 +13,6 @@ App consists of six CLI games:
 - Brain-gcd: try to guess the greatest common divisor for a given number
 - Brain-progression: try to guess the missing number in progression (7, 9, 11, .., 15)
 - Brain-prime: try to guess if the number is prime or not
-
 ---
 ### Tests and code quality assessment:
 [![Actions Status](https://github.com/Andrey-Volkovitskiy/python-project-49/workflows/hexlet-check/badge.svg)](https://github.com/Andrey-Volkovitskiy/python-project-49/actions) <a href="https://codeclimate.com/github/Andrey-Volkovitskiy/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/b9dac5515a4f57ed4447/maintainability" /></a>
