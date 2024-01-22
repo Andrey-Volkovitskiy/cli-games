@@ -4,6 +4,7 @@
 **This is the 1st training project of "Python Developer" specialization.**
 
 - Practiced user input processing
+- Practiced reasonable distribution of code between several modules
 - Practiced following DRY and clean code principles
 ---
 App consists of six CLI games:
